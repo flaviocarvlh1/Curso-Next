@@ -1,4 +1,16 @@
 .header {
+    background-color: #473939;
+    display: flex;
+    justify-content: space-between;
+}
 
-    background-color: #D99;
+.navItem {
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.navItem a {
+    font-size: 2vh;
+    font-family: cursive;
 }
