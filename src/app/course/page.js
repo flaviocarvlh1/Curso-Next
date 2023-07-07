@@ -3,9 +3,7 @@
 import Image from "next/image";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/course", {
-    cache: "no-cache",
-  });
+  const res = await fetch("http://localhost:3000/api/course");
   if (!res.ok) {
     throw new Error("Failed to get data from");
   }
