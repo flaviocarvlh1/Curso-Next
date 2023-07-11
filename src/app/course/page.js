@@ -68,7 +68,7 @@ async function Courses() {
             }}
           >
             <h2>{course.courseName}</h2>
-            <Image src={course.courseImage} width={100} height={100} />
+            <Image alt="png" src={course.courseImage} width={100} height={100}/>
             <p>Course Description: {course.courseDescription}</p>
           </div>
         ))}
