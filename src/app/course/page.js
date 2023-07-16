@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/course");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/course`);
   if (!res.ok) {
     throw new Error("Failed to get data");
   }
@@ -15,7 +15,7 @@ async function getData() {
 }
 
 async function handleAddCourse() {
-  const res = await fetch("http://localhost:3000/api/course", {
+  const res = await fetch (`${process.env.NEXT_PUBLIC_API_URL}/api/course`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
