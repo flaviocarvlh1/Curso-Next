@@ -16,6 +16,7 @@ async function getData() {
 
 async function handleAddCourse() {
   const res = await fetch (`${process.env.NEXT_PUBLIC_API_URL}/api/course`, {
+
     method: "POST",
     headers: {
       "Content-Type": "application/json",
