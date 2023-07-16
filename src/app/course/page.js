@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 async function getData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/course`);
   if (!res.ok) {
-    throw new Error("Failed to get data");
+    throw new Error (" Failed to get data ");
   }
 
   const data = await res.json();
