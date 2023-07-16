@@ -9,9 +9,9 @@ function Teachers() {
 
   return (
     <div className={styles.containerProfessor}>
-      {arrayDeProfessores.map((professor) => {
+      {arrayDeProfessores.map((professor, index) => {
         return (
-          <div className={styles.cardItemProfessor}>
+          <div className={styles.cardItemProfessor} key={index}>
             <img src="https://www.w3schools.com/howto/img_avatar.png" className={styles.avatar} />
             <div>Nome: {professor.nome}</div>
             <div>Idade: {professor.idade}</div>
