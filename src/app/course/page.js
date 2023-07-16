@@ -1,11 +1,12 @@
-"use client";
+"use client"
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 async function getData() {
   const res = await fetch("http://localhost:3000/api/course");
   if (!res.ok) {
-    throw new Error("Failed to get data from");
+    throw new Error("Failed to get data");
   }
 
   const data = await res.json();
@@ -19,30 +20,40 @@ async function handleAddCourse() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: {
+    body: JSON.stringify({
       courseName: "HTML",
       courseDescription: "Curso sobre html",
       courseImage:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
-    }
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
+    }),
   });
 
   if (!res.ok) {
     throw new Error("Failed to add course");
   }
 
-  const data = await res.json();
-  getData();
+  const addedCourse = await res.json();
+
+  setData((prevData) => [...prevData, addedCourse]);
 }
 
-async function Courses() {
-  const data = await getData();
+function Courses() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getData();
+      setData(response);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div
       style={{
         display: "flex",
-        minWidthwidth: "100vh",
+        minWidth: "100vh",
         display: "block",
         textAlign: "center",
       }}
@@ -51,8 +62,9 @@ async function Courses() {
         +
       </div>
       <div style={{ display: "flex" }}>
-        {data?.map((course) => (
-          <div key={0}
+        {data.map((course, index) => (
+          <div
+            key={index}
             style={{
               display: "flex",
               flexDirection: "column",
