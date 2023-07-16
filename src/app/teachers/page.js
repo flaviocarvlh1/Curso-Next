@@ -3,7 +3,7 @@ function Teachers() {
   const arrayDeProfessores = [
     { nome: "Teacher", idade: 39, salario: "2300" },
     { nome: "Teacher", idade: 32, salario: "2600" },
-    { nome: "Teacher", idade: 59, salario: "4000.30" },
+    { nome: "Teacher", idade: 59, salario: "5000" },
     { nome: "Teacher", idade: 49, salario: "4500" },
   ];
 
