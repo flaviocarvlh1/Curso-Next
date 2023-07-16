@@ -5,7 +5,7 @@ import styles from "./navbar.module.css";
 
 
 
-function Navbar({ children }) {
+function Navbar({ children, title }) {
 
   return (
 
@@ -13,7 +13,7 @@ function Navbar({ children }) {
 
       <div className={styles.header}>
 
-        <h2>Titulo</h2>
+        <h2>{title}</h2>
 
         <div className={styles.navItem}>
 
