@@ -17,16 +17,16 @@ function Navbar({ children, title }) {
 
         <div className={styles.navItem}>
 
+          <Link href={'/'}>Home</Link>
           <Link href={'/course'}>Courses</Link>
 
           <Link href={'/teachers'}>Teachers</Link>
 
+          
           <Link href={'/students'}>Students</Link>
 
-          <Link href={'/students'}>Students</Link>
-
-          <Link href={'/students'}>Students</Link>
-
+          <Link href={'/about'}>About</Link>
+          
         </div>
 
         <p>Logo</p>

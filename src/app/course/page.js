@@ -35,7 +35,7 @@ async function handleAddCourse() {
 
   const addedCourse = await res.json();
 
-  setData((prevData) => [...prevData, addedCourse]);
+
 }
 
 function Courses() {
