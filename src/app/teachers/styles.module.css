@@ -21,9 +21,12 @@
   display: flex;
   justify-content: space-around;
   min-height: 90vh;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .cardItemProfessor {
+  position: relative;
   background-color: rgb(113, 111, 111);
   height: 20vh;
   width: 20vh;
@@ -34,4 +37,11 @@
   border-radius: 10vh;
   height: 5vh;
   width: 5vh;
+}
+
+.buttonExcluirProfessor {
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  cursor: pointer;
 }
