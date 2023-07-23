@@ -1,0 +1,39 @@
+.cardStudents {
+    background-color: lightskyblue;
+    display: flex;
+    flex-grow: 1;
+    min-height: 40vh;
+    justify-content: space-around;
+}
+
+.studentItem {
+    background-color: lightgray;
+    height: 10vh;
+    position: relative;
+}
+
+.buttonAdicionar {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonAdicionar:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.container {
+    background-color: rgb(164, 176, 187);
+  justify-content: space-around;
+  min-height: 90vh;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+
+.buttonExcluirProfessor {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    cursor: pointer;
+  }

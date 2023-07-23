@@ -59,7 +59,7 @@ function Courses() {
         textAlign: "center",
       }}
     >
-      <div style={{ fontSize: 50 }} onClick={() => handleAddCourse()}>
+      <div style={{ fontSize: 50, cursor: "pointer" }} onClick={() => handleAddCourse()}>
         +
       </div>
       <div style={{ display: "flex" }}>
